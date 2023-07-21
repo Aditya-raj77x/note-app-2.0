@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export default function CreateNote() {
     const [note, setNote] = useState({
@@ -8,7 +8,7 @@ export default function CreateNote() {
         content: '',
         date: ''
     })
-    const history = useNavigate()
+    const history = useHistory()
 
     const onChangeInput = e => {
         const { name, value } = e.target;

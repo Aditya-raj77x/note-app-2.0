@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 export default function EditNote({ match }) {
     const [note, setNote] = useState({
@@ -9,7 +9,7 @@ export default function EditNote({ match }) {
         date: '',
         id: ''
     })
-    const history = useNavigate()
+    const history = useHistory()
 
     useEffect(() => {
         const getNote = async () => {
